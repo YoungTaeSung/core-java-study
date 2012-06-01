@@ -1,0 +1,20 @@
+package core.library.file;
+
+import java.io.File;
+
+public class SimpleFileTest {
+	public static void main(String[] args) {
+		String work_dir = System.getProperty("user.dir");
+		File file = new File(work_dir+"\\data\\test.in");
+		System.out.print("File Name: " + file);
+		
+		System.out.print("Does it exist?	" + file.exists());
+		System.out.print("Can it be read? " + file.canRead());
+		System.out.print("Can it be written? " + file.canWrite());
+		System.out.print("Is it a directory? " + file.isDirectory());
+		System.out.print("Is it a file? " + file.isFile());
+		System.out.print("Is it a hidden? " + file.isHidden());
+		
+		System.exit(0);
+	}
+}
